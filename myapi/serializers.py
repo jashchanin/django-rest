@@ -1,8 +1,8 @@
+from dataclasses import fields
 from rest_framework import serializers
+from .models import Item
 
-from .models import Student
-
-class StudentSerializer(serializers.ModelSerializer):
+class ItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Student
-        fields = ('first_name', 'last_name', 'age')
+        model = Item
+        fields = '__all__'
